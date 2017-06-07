@@ -16,7 +16,7 @@ import java.util.List;
  * Created by Administrator on 2017/5/31.
  */
 
-public class WheatherDB {
+public class WeatherDB {
 
     public static final String DB_NAME = "weather";
 
@@ -24,7 +24,7 @@ public class WheatherDB {
     private  static WeatherDB weatherDB;
     private SQLiteDatabase db;
 
-    public WheatherDB(Context context) {
+    public WeatherDB(Context context) {
         WheatherOpenHelper dbHelper  = new WheatherOpenHelper(context,DB_NAME,null,VERSION);
         db = dbHelper.getWritableDatabase();
     }
