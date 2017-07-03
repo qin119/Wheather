@@ -13,7 +13,7 @@ import java.net.URL;
 
 public class HttpUtil {
 
-    private static void sendHttpRequest(final String address,final HttpCallbackListener listener){
+    public static void sendHttpRequest(final String address, final HttpCallbackListener listener){
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -22,7 +22,7 @@ public class HttpUtil {
 
                 try {
 
-                    URL url = new URL(addresss);
+                    URL url = new URL(address);
                     connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
 
@@ -36,7 +36,7 @@ public class HttpUtil {
                     response.append(line);
                 }
                 if (listener != null){
-                    listener.onfinish(response.toString());
+                    listener.onFinish(response.toString());
                 }
 
              } catch (Exception e) {

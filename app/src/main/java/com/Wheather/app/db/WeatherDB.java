@@ -25,7 +25,7 @@ public class WeatherDB {
     private SQLiteDatabase db;
 
     public WeatherDB(Context context) {
-        WheatherOpenHelper dbHelper  = new WheatherOpenHelper(context,DB_NAME,null,VERSION);
+        WeatherOpenHelper dbHelper  = new WeatherOpenHelper(context,DB_NAME,null,VERSION);
         db = dbHelper.getWritableDatabase();
     }
 

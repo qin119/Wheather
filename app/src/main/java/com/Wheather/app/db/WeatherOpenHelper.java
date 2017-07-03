@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by Administrator on 2017/5/26.
  */
 
-public class WheatherOpenHelper extends SQLiteOpenHelper {
+public class WeatherOpenHelper extends SQLiteOpenHelper {
 
     /*
     * Province表建表语句*/
@@ -23,7 +23,7 @@ public class WheatherOpenHelper extends SQLiteOpenHelper {
 
     public  static  final String CREATE_CITY = "create table City("
 
-            + "id integer primary key autoincrment,"
+            + "id integer primary key autoincrement,"
             + "city_name text,"
             + "city_code text,"
             + "province_id integer)";
@@ -38,7 +38,7 @@ public class WheatherOpenHelper extends SQLiteOpenHelper {
             +"county_code text,"
             +"city_id integer)";
 
-    public  WheatherOpenHelper(Context context, String name, CursorFactory factory,int version){
+    public WeatherOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version){
         super(context,name,factory,version);
 
     }
