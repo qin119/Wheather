@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.Wheather.app.R;
 import com.Wheather.app.modle.City;
@@ -53,6 +54,7 @@ public class WeatherActivity extends Activity {
 
         }else {
             showWeather();
+            Toast.makeText(this, "today", Toast.LENGTH_SHORT).show();
 
         }
     }
